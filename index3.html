@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine's Day Card</title>
+  <link rel="stylesheet" href="styles3.css">
+  <script>
+    var timer = null;
+    function openCard() {
+      clearTimeout(timer);
+      if (document.getElementById("open").checked) {
+        timer = setTimeout(function() {
+          window.location.href = "index4.html";
+        }, 3000);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="valentines-day-card">
+    <input id="open" type="checkbox">
+    <label class="open" for="open"></label>
+    <div class="card-front">
+      <div class="note">Click to Open</div>
+    </div>
+    <div class="card-inside">
+      <div class="text-one">Happy</div>
+      <div class="heart"></div>
+      <div class="smile"></div>
+      <div class="eyes"></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("open").addEventListener("click", openCard);
+  </script>
+</body>
+</html>

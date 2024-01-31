@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('bg.png') center center/cover;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.toggle-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-box {
+    width: 100px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.toggle-box input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-box label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #eb8080;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-box:hover label {
+    background-color: #F2F2AC;
+}
+
+.toggle-box label:active {
+    transform: scale(0.95);
+}
+
+.toggle-box input[type="checkbox"]:checked + label {
+    background-color: #eb8080;
+}
+
+.image-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1000;
+    transition: display 0.3s ease;
+}
+
+.image-popup img {
+    max-width: 80%;
+    max-height: 80vh;
+    margin: 10% auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+.image-popup:target {
+    display: block;
+}
+
+.image-popup:target img {
+    animation: backwards 0.5s ease-in-out;
+}
+
+@keyframes backwards {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
