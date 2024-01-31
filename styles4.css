@@ -20,6 +20,32 @@ body {
     padding: 20px;
 }
 
+#nextButton {
+    width: 100px;
+    height: 39px;
+    background-color: #eb8080;
+    color: #000000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+}
+
+#nextButton:hover {
+    background-color: #F2F2AC;
+}
+
+#nextButton:active {
+    transform: scale(0.95);
+}
+
 .toggle-boxes {
     display: flex;
     justify-content: space-between;
