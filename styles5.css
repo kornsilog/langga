@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Mochiy Pop P One', sans-serif;
-    background: url('bg.png') center center/cover;
+    background: url('bg1.png') center center/cover;
     color: var(--main-text-color);
     display: flex;
     flex-direction: column;
